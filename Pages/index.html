@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WomMad</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+    
+<nav>
+    <img src="/Assets/logo.png" alt="logo">
+
+    <ul class="sidebar">
+        <li onclick="hideSidebar()"><img src="/Assets/xmark.svg" alt="svg-img"></li>
+        <li><a href="#about-us">Про нас</a></li>
+        <li><a href="#services">Послуги</a></li>
+        <li><a href="#doctors">Лікарі</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+    </ul>
+
+    <ul class="navbar">
+        <li class="hideOnMobile"><a href="#about-us">Про нас</a></li>
+        <li class="hideOnMobile"><a href="#services">Послуги</a></li>
+        <li class="hideOnMobile"><a href="#doctors">Лікарі</a></li>
+        <li class="hideOnMobile"><a href="#contacts">Контакти</a></li>
+        <li onclick="showSidebar()"><img src="/Assets/bars.svg" alt="svg-img"></li>
+    </ul>
+
+    <div class="text">
+        <h1>+380 68 382 54 82</h1>
+    </div>
+</nav>
+
+<header>
+    <div class="text">
+        <h1>WOMAN MEDICAL</h1>
+        <p>Медичний центр жіночого здоров'я</p>
+    </div>
+
+     <div class="appointment-container">
+        <!-- Круглая кнопка -->
+        <button class="appointment-button" id="appointmentBtn">
+            <div class="button-text">
+                Записатись<br>на прийом
+            </div>
+        </button>
+
+        <!-- Форма записи -->
+        <div class="appointment-form" id="appointmentForm">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <div class="form-content">
+                <div class="form-left">
+                    <h2>Записатись<br>на прийом</h2>
+                    <p>Заповніть усі поля, і ми зв'яжемось з вами найближчим часом</p>
+                </div>
+                <div class="form-divider"></div>
+                <div class="form-right">
+                    <div class="input-group">
+                        <input type="text" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Номер телефону" required>
+                    </div>
+                    <button class="submit-btn" type="submit">Відправити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="about-us" id="about-us">
+
+    <div class="text">
+        <h2>Сучасний медичний центр <span class="span">у Києві</span></h2>
+    </div>
+
+    <div class="images">
+        <img src="/Assets/hospital1.jpg">
+        <img src="/Assets/hospital.jpg">
+        <img src="/Assets/doctors.jpg">
+        <img src="/Assets/kab1.jpg">
+        <img src="/Assets/koridor.jpg">
+    </div>
+
+</div>
+
+<div class="experience">
+
+    <div class="text1">
+        <h1>Досвід, якому <span class="span"> довіряють </span></h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="text">
+                <h3>Досвідчені лікарі</h3>
+                <p>кваліфікована медична допомога від фахівців з багаторічною практикою та індивідуальним підходом до кожного пацієнта</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="text">
+                <h3>Комплекс- <br>ний підхід</h3>
+                <p>повна діагностика, лікування та профілактика з урахуванням усіх аспектів здоров’я пацієнта</p>
+            </div>
+        </div>
+
+         <div class="box">
+            <div class="text">
+                <h3>Доступність послуг</h3>
+                <p>якісна медична допомога за зрозумілими умовами та у зручний для пацієнта час</p>
+            </div>
+        </div>
+
+         <div class="box">
+            <div class="text">
+                <h3>Сучасне обладнання</h3>
+                <p>точна діагностика та ефективне лікування завдяки новітнім медичним технологіям</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="services" id="services">
+
+    <div class="container">
+        <div class="header">
+            <h1>Наші можливості<br>для вашого здоров'я</h1>
+            <p>[ WOMAN MEDICAL ]</p>
+        </div>
+
+        <div class="accordion">
+            <!-- Ультразвукова діагностика -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-number">01</span>
+                        <span class="accordion-name">УЛЬТРАЗВУКОВА ДІАГНОСТИКА</span>
+                    </div>
+                    <span class="accordion-arrow">↓</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">ОЧП (печінка, жовчний міхур, підшлункова залоза, селезінка)</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Нирки, надниркові залози, сечовий міхур</span>
+                            <span class="service-price">500 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">ОЧП + нирки</span>
+                            <span class="service-price">800 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Щитоподібна залоза</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Молочна залоза</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Органи малого тазу у жінок</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Передміхурова залоза у чоловіків</span>
+                            <span class="service-price">500 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Судини шиї</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Скринінг УЗД вагітності (11-13 тижнів)</span>
+                            <span class="service-price">800 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Скринінг УЗД вагітності (18-21 тиждень)</span>
+                            <span class="service-price">1000 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Консультації лікарів -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-number">02</span>
+                        <span class="accordion-name">КОНСУЛЬТАЦІЇ ЛІКАРІВ</span>
+                    </div>
+                    <span class="accordion-arrow">↓</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">Консультація терапевта</span>
+                            <span class="service-price">500 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Консультація кардіолога</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Консультація ендокринолога</span>
+                            <span class="service-price">600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Консультація невролога</span>
+                            <span class="service-price">550 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Гінекологія -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-number">03</span>
+                        <span class="accordion-name">ГІНЕКОЛОГІЯ</span>
+                    </div>
+                    <span class="accordion-arrow">↓</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">Первинна консультація гінеколога</span>
+                            <span class="service-price">550 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Повторна консультація гінеколога</span>
+                            <span class="service-price">450 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Кольпоскопія</span>
+                            <span class="service-price">400 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Встановлення внутрішньоматкової спіралі</span>
+                            <span class="service-price">800 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Маніпуляції -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-number">04</span>
+                        <span class="accordion-name">МАНІПУЛЯЦІЇ</span>
+                    </div>
+                    <span class="accordion-arrow">↓</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">Внутрішньом'язова ін'єкція</span>
+                            <span class="service-price">80 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Внутрішньовенна ін'єкція</span>
+                            <span class="service-price">100 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Встановлення крапельниці</span>
+                            <span class="service-price">150 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Вимірювання тиску</span>
+                            <span class="service-price">50 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- УЗД чекапи -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-number">05</span>
+                        <span class="accordion-name">УЗД ЧЕКАПИ</span>
+                    </div>
+                    <span class="accordion-arrow">↓</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">Базовий чекап (ОЧП + нирки + щитоподібна залоза)</span>
+                            <span class="service-price">1500 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Жіночий чекап (ОЧП + органи малого тазу + молочна залоза)</span>
+                            <span class="service-price">1600 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Чоловічий чекап (ОЧП + нирки + передміхурова залоза)</span>
+                            <span class="service-price">1400 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Додаткові послуги -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-number">06</span>
+                        <span class="accordion-name">ДОДАТКОВІ ПОСЛУГИ</span>
+                    </div>
+                    <span class="accordion-arrow">↓</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">Виклик лікаря додому</span>
+                            <span class="service-price">800 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Оформлення медичної довідки</span>
+                            <span class="service-price">200 грн</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Видача рецепту</span>
+                            <span class="service-price">100 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="yzd">
+
+    <div class="text1">
+        <h1>УЗД <span class="span">check-up</span> </h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+
+            <div class="image">
+                <img src="/Assets/yzi6.jpg">
+            </div>
+
+            <div class="text">
+
+                <div class="txt1">
+                    <h1>Жіноче здоров'я №1</h1>
+                    <h2>Що входить:</h2>
+                </div>
+
+                <div class="txt2">
+                    <p>Консультація лікаря</p>
+                    <p>ЕКГ</p>
+                    <p>Флюорографія</p>
+                    <p>Аналіз сечі</p>
+                    <p>Гормони (ТТГ, Т4 віль., АТПО)</p>
+                    <p>Мазки на мікрофлору</p>
+                </div>
+            </div>
+
+            <span class="price">1900 грн</span>
+        </div>
+
+        <div class="box">
+
+            <div class="image">
+                <img src="/Assets/yzi5.jpg">
+            </div>
+
+            <div class="text">
+
+                <div class="txt1">
+                    <h1>Жіноче здоров'я №2</h1>
+                    <h2>Що входить:</h2>
+                </div>
+
+                <div class="txt2">
+                    <p>Консультація лікаря</p>
+                    <p>ЕКГ</p>
+                    <p>Мазки на мікрофлору</p>
+                    <p>Аналіз сечі</p>
+                    <p>Холестерин</p>
+                    <p>Аналізи крові (розгорнутий, на цукор, <br> гемоглобін)</p>
+                </div>
+            </div>
+
+            <span class="price">2200 грн</span>
+        </div>
+
+        <div class="box">
+
+            <div class="image">
+                <img src="/Assets/yzi3.jpg">
+            </div>
+
+            <div class="text">
+
+                <div class="txt1">
+                    <h1>Жіноче здоров'я №3</h1>
+                    <h2>Що входить:</h2>
+                </div>
+
+                <div class="txt2">
+                    <p>Консультація лікаря</p>
+                    <p>ЕКГ</p>
+                    <p>Холестерин</p>
+                    <p>Аналіз сечі</p>
+                    <p>Нирковий комплекс</p>
+                    <p>Аналізи крові (розгорнутий, на цукор, <br> гемоглобін)</p>
+                </div>
+            </div>
+
+            <span class="price">2200 грн</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="doctors" id="doctors">
+    
+<div class="container">
+
+        <h1>Наша команда <span class="span"> лікарів </span></h1>
+        
+        <div class="carousel-wrapper">
+            <button class="carousel-btn carousel-btn-left" id="prevBtn">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="carousel-container" id="carousel">
+                <div class="doctor-card">
+                    <img src="/Assets/doctor1.jpg" alt="Дуцак Катерина Георгіївна" class="doctor-image">
+                    <div class="doctor-info">
+                        <div class="doctor-name">Дуцак</div>
+                        <div class="doctor-full-name">Катерина Георгіївна</div>
+                        <div class="doctor-specialty">Лікар акушер-гінеколог, УЗД</div>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="/Assets/doctor3.jpg" class="doctor-image">
+                    <div class="doctor-info">
+                        <div class="doctor-name">Гончаренко</div>
+                        <div class="doctor-full-name">Антон Константинович</div>
+                        <div class="doctor-specialty">Лікар-ендокринолог, УЗД</div>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="/Assets/doctor5.jpg" class="doctor-image">
+                    <div class="doctor-info">
+                        <div class="doctor-name">Котенко</div>
+                        <div class="doctor-full-name">Олена Вікторівна</div>
+                        <div class="doctor-specialty">Сімейний лікар, педіатр</div>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="/Assets/doctor4.jpg" alt="Степаненко Надія Миколаївна" class="doctor-image">
+                    <div class="doctor-info">
+                        <div class="doctor-name">Степаненко</div>
+                        <div class="doctor-full-name">Надія Миколаївна</div>
+                        <div class="doctor-specialty">Лікар акушер-гінеколог, УЗД</div>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="/Assets/doctor.jpg" alt="Громова Олена Олегівна" class="doctor-image">
+                    <div class="doctor-info">
+                        <div class="doctor-name">Громова</div>
+                        <div class="doctor-full-name">Олена Олегівна</div>
+                        <div class="doctor-specialty">Лікар акушер-гінеколог, сімейний лікар</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn carousel-btn-right" id="nextBtn">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="contacts" id="contacts">
+    <div class="container">
+
+        <div class="form-content">
+                <div class="form-left">
+                    <h2>Записатись<br>на прийом</h2>
+                    <p>Заповніть усі поля, і ми зв'яжемось з вами найближчим часом</p>
+                </div>
+                <div class="form-divider"></div>
+                <div class="form-right">
+                    <div class="input-group">
+                        <input type="text" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Номер телефону" required>
+                    </div>
+                    <button class="submit-btn" type="submit">Відправити</button>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<div class="footer">
+
+    <div class="text1">
+        <h1>WOMAN <span class="span">MEDICAL</span></h1>
+    </div>
+
+    <div class="content">
+        
+        
+        <div class="box centre"> 
+
+            <div class="image">
+                <img src="/Assets/location.svg" alt="location">
+            </div>
+            <div class="text">
+                <h3>м.Київ вул.Крещатик 27</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/Assets/instagram.png" alt="instagram">
+            </div>
+            <div class="text">
+                <h3>Instagram</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="text">
+                <h3>Графік роботи:</h3>
+                <p>Пн-Пт: 08:00-20:00</p>
+            </div>
+        </div>
+
+        <div class="box centre">
+            <div class="image">
+                <img src="/Assets/envelope.svg" alt="email">
+            </div>
+            <div class="text">
+                <h3>woman.medical@gmail.com</h3>
+            </div>
+        </div>
+
+        <div class="box ">
+            <div class="image">
+                <img src="/Assets/facebook.png" alt="facebook">
+            </div>
+            <div class="text">
+                <h3>Facebook</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="text">
+                <h3>Телефон:</h3>
+                <p>+380(98) 475 29 85</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="credit">Woman Medical | All rights reserved</div>
+
+</div>
+
+
+<script src="/JS/script.js"></script>
+</body>
+</html>
