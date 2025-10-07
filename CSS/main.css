@@ -590,7 +590,7 @@ header p {
 
 .yzd .box-container {
     display: flex;
-    margin-bottom: 40px;
+    margin: 40px;
     justify-content: space-evenly;
 }
 
@@ -1489,6 +1489,7 @@ header p {
         font-size: 13px;
     }
 }
+
 
 
 
