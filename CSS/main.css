@@ -137,7 +137,7 @@ header {
     justify-content: baseline;
     gap: 20px;
     height: 100vh;
-    background-image: url(/Assets/baby4.jpg);
+    background-image: url(../Assets/baby4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1489,3 +1489,4 @@ header p {
         font-size: 13px;
     }
 }
+
